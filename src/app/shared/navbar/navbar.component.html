@@ -1,0 +1,58 @@
+<nav class="menu">
+  <div class="menu-sticky">
+    <a routerLink="/dashboard" class=" logue" href="#">Pet Doctor</a>
+
+    <div class="" id="navbarSupportedContent">
+      <ul class="menu__list">
+        <li class="menu__list-link active">
+          <a routerLink="/dashboard" class="menu__list-link--a " aria-current="page" href="#"><span
+              class="material-symbols-outlined">
+              dashboard
+            </span>Dashboard</a></li>
+        <li class="menu__list-link">
+          <a routerLink="/pacientes" class="menu__list-link--a " aria-current="page" href="#"><span
+              class="material-symbols-outlined">
+              sound_detection_dog_barking
+            </span>Pacientes</a></li>
+
+        <li class="menu__list-link">
+          <a routerLink="/citas" class="menu__list-link--a " href="#"><span class="material-symbols-outlined">
+              calendar_month
+            </span> Citas</a>
+        </li>
+        <li class="menu__list-link">
+          <a routerLink="/equipo" class="menu__list-link--a" href="#"><span class="material-symbols-outlined">
+              groups_2
+            </span> Equipo</a>
+        </li>
+
+
+      </ul>
+
+      <div class="nav__footer">
+        <a href="" class="menu__list-link--a"><span class="material-symbols-outlined">
+            person
+          </span>Usuario</a>
+        <a href="" class="menu__list-link--a"><span class="material-symbols-outlined">
+            logout
+            </span>Salir</a>
+      </div>
+      <!-- <ul class="d-flex flex-column gap-1 list-group justify-content-between  mt-2  ">
+          <li class="li">
+            <a  href="" class="nav-link text-white "><span class="material-symbols-outlined">
+              person
+              <!-- </span>{{userData.user}}</a> -->
+      <!-- </li>
+          <li class="li">
+            <a *ngIf="auth.getToken()" (click)="logOut()" routerLink="/login" href="" class="nav-link  text-white ">
+              <span class="material-symbols-outlined">
+                logout
+                </span>
+              Salir</a>
+          </li> -->
+      <!-- </ul> -->
+
+    </div>
+
+  </div>
+</nav>
