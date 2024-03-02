@@ -1,0 +1,20 @@
+
+
+.container {
+    display: flex;
+// display: grid;
+// grid-template-columns: repeat(5, 1fr);
+// grid-template-rows: repeat(5, 1fr);
+// grid-column-gap: 0px;
+// grid-row-gap: 0px;
+}
+
+.router {
+    width: 100%;
+}
+// .menu { 
+//     grid-area: 1 / 1 / 6 / 1; 
+//     width: 200px;
+// }
+// .footer { grid-area: 5 / 2 / 6 / 6; }
+// .router { grid-area: 1 / 2 / 5 / 6; }
