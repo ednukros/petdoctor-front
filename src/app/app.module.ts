@@ -7,6 +7,9 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ChatComponent } from './shared/chat/chat.component';
+import { PatientsComponent } from './pages/patients/patients.component';
+import { DatesComponent } from './pages/dates/dates.component';
+import { TeamComponent } from './pages/team/team.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { ChatComponent } from './shared/chat/chat.component';
     NavbarComponent,
     FooterComponent,
     DashboardComponent,
-    ChatComponent
+    ChatComponent,
+    PatientsComponent,
+    DatesComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,

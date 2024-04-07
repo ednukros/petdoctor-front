@@ -9,7 +9,7 @@
     --tertiary: #F6B17A;
     // --dark:
     // --light:
-    --white:#fff;
+    --white:#f2eded;
     --black:#000;
     --alert: #CC3300;
     --warning: #ffcc00;
@@ -384,8 +384,13 @@ html {
   a{
     text-decoration: none;
     color: var(--white);
+    cursor: pointer;
   }
 
   li{
     list-style: none;
+  }
+
+  html{
+    background-color: #dde0f4;
   }

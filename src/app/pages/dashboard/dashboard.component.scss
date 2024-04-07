@@ -1,5 +1,140 @@
-.dashboard__container{
-    width: 100%;
-    height: 100%;
+.dashboard__container {
+  width: 100%;
+  height: 100%;
+  color: var(--primary);
+  background-color: #dde0f4;
+  padding: 10px 0px;
 
+
+}
+
+.dashboard__content {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 10px;
+  grid-template-rows: repeat(5, 1fr);
+
+
+}
+
+.dashboard__greetings--greeting {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px var(--primary);
+  color: var(--primary-light);
+  word-spacing: 2px;
+}
+
+.dashboard__name {
+  color: var(--alert);
+  font-weight: bold;
+  word-spacing: 2px;
+  text-shadow: 1px 1px 1px var(--alert);
+}
+
+.dashboard__s {
+  font-size: 1.5rem;
+  word-spacing: 2px;
+}
+
+
+.dashboard__day {
+  border-radius: 8px;
+//   background-color: var(--white);
+color: var(--white);
+background: rgb(45,50,80);
+background: linear-gradient(180deg, rgba(45,50,80,1) 5%, rgba(45,50,80,1) 25%, rgba(66,71,105,1) 100%);padding: 20px;
+  box-shadow: 0px 0px 0px var(--primary);
+    //   border-radius: 37px;
+    //   box-shadow: 18px 18px 36px #858692,
+    //     -18px -18px 36px #ffffff;
+    grid-area: 1 / 1 / 6 / 2;
+}
+
+.btn-large {
+  background-color: var(--alert);
+  padding: 5px 12px;
+  border-radius: 5px;
+
+
+}
+
+.btn-large:hover {
+  opacity: 90%;
+
+}
+
+
+/* PROFILE */
+
+.dashboard__profile {
+  background-color: var(--tertiary);
+  border-radius: 5px;
+  text-align: -webkit-center;
+  grid-area: 1 / 2 / 5 / 3;
+  height: fit-content;
+  color: var(--white);
+  padding: 10px;
+  width: fit-content;
+}
+
+.dashboard__profile--tit {
+  background-color: var(--white);
+  border: 1px solid var(--tertiary);
+  margin-top: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+}
+
+.dashboard__profile--title {
+  font-size: 1.3rem;
+}
+
+
+/* WIDGET PARA EL TIEMPO */
+
+.dashboard__weather{
+  grid-area: 1 / 2 / 5 / 3;
+
+  background-color: var(--white);
+  color: var(--primary);
+ border-radius:  5px;
+ width: fit-content;
+
+}
+.card{
+padding: 10px;
+}
+
+.card > img {
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 50px var(--tertiary));
+}
+
+.max_temp{
+  border-left: 1px solid white;
+}
+
+.card_weather__container{
+  display: flex;
+  justify-content: center;
+  gap:10px;
+}
+
+.card_city {
+  margin: 0;
+}
+
+.card_weather{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  padding: 20px
+}
+
+.card_weather > p {
+  margin: 5px;
 }

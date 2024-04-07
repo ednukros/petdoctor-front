@@ -1,7 +1,71 @@
 <div class="dashboard__container">
-    <div class="dashboard__content">
+  <div class="dashboard__greetings">
+    <p class="dashboard__greetings--greeting">Buenos días, <span class="dashboard__name">Dra. Sánchez</span></p>
+  </div>
+  <div class="dashboard__content">
 
+    <div class="dashboard__day">
+      <p class="dashboard__s">Estas son tus citas de hoy:</p>
+      <ul>
+        <li><span>10:00h - </span>Luffy - Inma sánchez</li>
+        <li><span>10:00h - </span>Luffy - Inma sánchez</li>
+        <li><span>10:00h - </span>Luffy - Inma sánchez</li>
+        <li><span>10:00h - </span>Luffy - Inma sánchez</li>
+        <li><span>10:00h - </span>Luffy - Inma sánchez</li>
+
+
+
+      </ul>
+      <a class="btn-large" href="">Ver todas las citas</a>
     </div>
-    <app-chat></app-chat>
-    <app-footer></app-footer>
+    <!-- <div class="dashboard__qactions">
+            <a href=""></a><a href=""></a><a href=""></a>
+        </div> -->
+
+    <div class="dashboard__profile">
+      <div class="dashboard__profile--tit">
+        <!-- <p class="dashboard__profile--title">Información personal</p> -->
+      </div>
+
+      <img src="../../../assets/user2.png" class="dashboard__profile--img">
+
+
+      <div class="dashboard__profile--data">
+        <p>Nombre: <span>Inma Sánchez Menarguez</span></p>
+        <p>Especialidad: <span>Felinos</span></p>
+        <p>Usuario de acceso: <span>InSaMe25</span></p>
+
+        <a class="" href=""><span class="material-symbols-outlined">
+            edit
+          </span></a>
+      </div>
+
+    
+    </div>
+    <div class="dashboard__weather">
+      <div class="cardContainer">
+        <div class="card">
+          <p class="card_city">{{city}}</p>
+          <img width="70" src="{{'../../../assets/' + detallesHoy.weather + '.svg'}}" alt="">
+        
+         <div class="card_weather__container">
+          <div class="card_weather">
+            <p>Min</p>
+            <p>{{tempMin}}°C</p>
+          </div>
+          <div class="card_weather max_temp">
+            <p>Max</p>
+            <p>{{tempMax}}°C</p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  <div class="dashboard__qactions">
+    <span>Acciones rápidas</span>
+    <a>1</a>
+    <a>2</a>
+    <a>3</a>
+  </div>
+</div>
 </div>
