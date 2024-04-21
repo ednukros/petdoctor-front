@@ -3,7 +3,9 @@ export interface Patient {
     name: string;
     species: string;
     race: string;
-    next_appointment: Date;
-    phoneNumber: number;
-    // email: string;
+    next_appointment: string;
+    phoneNumber: string;
+    email: string;
+    owner:string;
+    age:number;
 }

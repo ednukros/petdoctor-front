@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,19 @@ import { ChatComponent } from './shared/chat/chat.component';
 import { PatientsComponent } from './pages/patients/patients.component';
 import { DatesComponent } from './pages/dates/dates.component';
 import { TeamComponent } from './pages/team/team.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldControl } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ToastrModule } from 'ngx-toastr';
+
+import { MatIconButton } from '@angular/material/button';
+import { PatientDetailsComponent } from './pages/patient-details/patient-details.component';
+import { PatientEditComponent } from './pages/patient-edit/patient-edit.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,15 +31,35 @@ import { TeamComponent } from './pages/team/team.component';
     NavbarComponent,
     FooterComponent,
     DashboardComponent,
+    
+
     ChatComponent,
-    PatientsComponent,
     DatesComponent,
-    TeamComponent
+    TeamComponent,
+    PatientDetailsComponent,
+    PatientEditComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    MatTableModule,
+    PatientsComponent,
+    MatSortModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToastrModule.forRoot({
+      timeOut: 3500,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    }),
+    [HttpClientModule,
+      MatInputModule,
+      MatFormFieldModule
+    // BrowserAnimationsModule
   ],
+  
+  ],
+  exports: [ MatFormFieldModule, MatInputModule ],
   providers: [],
   bootstrap: [AppComponent]
 })

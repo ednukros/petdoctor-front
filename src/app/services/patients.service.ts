@@ -13,7 +13,7 @@ export class PatientsService {
 
   constructor(private http: HttpClient) {
     this.myAppUrl = "http://localhost:3001/";
-    this.myApiUrl = 'patients/'
+    this.myApiUrl = 'pacientes/'
    }
 
    getPatients(): Observable<Patient[]>{
@@ -34,7 +34,7 @@ export class PatientsService {
   //  }
 
   createPatient(patient: Patient): Observable<void> {
-    return this.http.post<void>(`${this.myAppUrl}${this.myApiUrl}`, patient)
+    return this.http.post<void>(`${this.myAppUrl}${this.myApiUrl}/registro`, patient)
   }
 
   getPatient(id: number): Observable<Patient>{

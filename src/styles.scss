@@ -1,4 +1,39 @@
 
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$pet-doctor-front-primary: mat.define-palette(mat.$indigo-palette);
+$pet-doctor-front-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$pet-doctor-front-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$pet-doctor-front-theme: mat.define-light-theme((
+  color: (
+    primary: $pet-doctor-front-primary,
+    accent: $pet-doctor-front-accent,
+    warn: $pet-doctor-front-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($pet-doctor-front-theme);
+
+
 /*GLOBAL PROPERTIES*/
 
 :root{
@@ -17,6 +52,40 @@
     --font: 'Montserrat', sans-serif;
 
 
+}
+.btn{
+  color: var(--white);
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.btn:hover{
+
+  opacity: 70%;
+
+}
+.btn-show{
+  background-color: var(--primary-light);
+  
+}
+.btn-date{
+  background-color: var(--warning);
+  
+}
+.btn-edit{
+  background-color: var(--secondary);
+  
+}
+.btn-delete{
+  background-color: var(--alert);
+  
 }
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -394,3 +463,5 @@ html {
   html{
     background-color: #dde0f4;
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
