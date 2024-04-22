@@ -40,7 +40,7 @@
         <ng-container matColumnDef="actions">
           <th  style="width: 200px;" mat-header-cell *matHeaderCellDef> Acciones </th>
           <td style="display: flex; gap: 5px; width: fit-content; height: inherit; align-items: ce;" mat-cell *matCellDef="let element">
-             <button  type="button" class="btn btn-show"><span
+             <button routerLink="/paciente/{{element.id}}" type="button" class="btn btn-show"><span
             class="material-symbols-outlined">
             visibility
           </span></button>

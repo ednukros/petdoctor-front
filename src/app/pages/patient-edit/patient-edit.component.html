@@ -1,13 +1,13 @@
-<div  class="background p-5 w-100 h-100   bg-primary-subtle   ">
+<div  class="form-patient   ">
  
-    <div class=" content w-50 mx-auto   h-100 rounded-3 shadow-lg  bg-white     ">
-      <div class="text-primary d-flex pt-4 justify-content-center ">
-        <span class="fs-3 material-symbols-outlined">
+    <div class=" form-patient__container     ">
+      <div class=" form-patient__heading     ">
+        <span class=" material-symbols-outlined">
           sound_detection_dog_barking
           </span><h3 class="text-primary ">{{ task }} Paciente</h3>
       </div>
      
-      <form [formGroup]="form" (ngSubmit)="addPatient()" class="p-3" >
+      <form [formGroup]="form" (ngSubmit)="addPatient()" class="form" >
         <input formControlName="name" type="text" placeholder="Nombre del paciente">      
         <small *ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched" id="emailHelp">Introduce el nombre de la mascota</small>
        

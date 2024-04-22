@@ -11,13 +11,12 @@ import { PatientDetailsComponent } from './pages/patient-details/patient-details
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path:'crear', component: PatientEditComponent},
-
+  { path:'paciente/:id', component: PatientDetailsComponent},
   { path: 'pacientes', component: PatientsComponent },
   { path: 'equipo', component: TeamComponent },
   { path: 'citas', component: DatesComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path:'editar/:id', component: PatientEditComponent},
-  // { path:'patient/:id', component: PatientDetailsComponent},
 
 ];
 

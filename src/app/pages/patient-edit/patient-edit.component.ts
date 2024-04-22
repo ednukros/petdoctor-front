@@ -72,17 +72,19 @@ export class PatientEditComponent implements OnInit {
         name: data.name,
         species: data.species,
         race: data.race,
-        next_appointment: data.next_appointment,
+        next_appointment: data.next_date,
         phoneNumber: data.phoneNumber,
         email: data.email,
         owner: data.owner,
-
+        
 
 
       })
+      console.log(data)
 
     })
-
+    console.log(id)
+    
   }
 
   addPatient() {
@@ -91,7 +93,7 @@ export class PatientEditComponent implements OnInit {
       name: this.form.value.name,
       species: this.form.value.species,
       race: this.form.value.race,
-      next_appointment: this.form.value.next_appointment,
+      next_date: this.form.value.next_appointment,
       phoneNumber: this.form.value.phoneNumber,
       email: this.form.value.email,
       age: this.form.value.age,

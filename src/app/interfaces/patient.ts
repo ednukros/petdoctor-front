@@ -3,7 +3,7 @@ export interface Patient {
     name: string;
     species: string;
     race: string;
-    next_appointment: string;
+    next_date: string;
     phoneNumber: string;
     email: string;
     owner:string;
