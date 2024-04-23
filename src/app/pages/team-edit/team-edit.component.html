@@ -1,0 +1,31 @@
+<div class="container p-5">
+
+    <div>
+        <h3 class="text-primary ">{{task}} Veterinario</h3>
+    </div>
+
+
+
+        <form action="" [formGroup]="form" (ngSubmit)="addEmployee()">
+
+            <input formControlName="name" type="text" class="form-control mt-3" placeholder="Nombre">      
+            <input formControlName="email" type="email" class="form-control mt-3" placeholder="Correo electrónico">      
+            <input formControlName="role" type="text" class="form-control mt-3" placeholder="rol">      
+            <input formControlName="speciality" type="text" class="form-control mt-3" placeholder="speciality">      
+            <input formControlName="phoneNumber" type="text" class="form-control mt-3" placeholder="telefono">  
+            <input formControlName="password" type="text" class="form-control mt-3" placeholder="contraseña de acceso">   
+            <input formControlName="userName" type="text" class="form-control mt-3" placeholder="Nombre de usuario">      
+   
+    
+
+
+            <div class="d-flex justify-content-evenly    gap-2   mt-3">
+                <button type="submit"  class="btn px-2 py-2 btn-success  text-white  "><span class="material-symbols-outlined">
+                  check_box
+                  </span></button>
+              <button type="button" class="btn px-2 py-2 btn-danger" routerLink="/equipo"><span class="material-symbols-outlined">
+                disabled_by_default
+                </span></button>
+              </div>
+        </form>
+</div>

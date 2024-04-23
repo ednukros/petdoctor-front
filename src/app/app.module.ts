@@ -24,6 +24,7 @@ import { MatIconButton } from '@angular/material/button';
 import { PatientDetailsComponent } from './pages/patient-details/patient-details.component';
 import { PatientEditComponent } from './pages/patient-edit/patient-edit.component';
 import { RouterModule } from '@angular/router';
+import { TeamEditComponent } from './pages/team-edit/team-edit.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { RouterModule } from '@angular/router';
     DatesComponent,
     TeamComponent,
     PatientDetailsComponent,
-    PatientEditComponent
+    PatientEditComponent,
+    TeamEditComponent
   ],
   imports: [
     FormsModule,
