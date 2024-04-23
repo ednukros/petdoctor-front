@@ -1,28 +1,28 @@
 <nav class="menu">
   <div class="menu-sticky">
-    <!-- <a routerLink="/dashboard" class=" logue" href="#">Pet Doctor</a> -->
+    <!-- <a routerLink="/dashboard" class=" logue" >Pet Doctor</a> -->
     <img class="menu-logue" src="../../../assets/logue.png" alt="">
     <button class="menu__open">abrir</button>
     <div class="menu__nav" id="navbarSupportedContent">
       <ul class="menu__list">
-        <li class="menu__list-link active">
-          <a routerLink="/dashboard" class="menu__list-link--a " aria-current="page" href="#"><span
+        <li [routerLinkActive]="'active'" routerLink="/dashboard" class="menu__list-link ">
+          <a class="menu__list-link--a " aria-current="page" ><span
               class="material-symbols-outlined">
               dashboard
             </span>Dashboard</a></li>
-        <li class="menu__list-link">
-          <a routerLink="/pacientes" class="menu__list-link--a " aria-current="page" href="#"><span
+        <li [routerLinkActive]="'active'" routerLink="/pacientes" class="menu__list-link">
+          <a  class="menu__list-link--a " aria-current="page" ><span
               class="material-symbols-outlined">
               sound_detection_dog_barking
             </span>Pacientes</a></li>
 
-        <li class="menu__list-link">
-          <a routerLink="/citas" class="menu__list-link--a " href="#"><span class="material-symbols-outlined">
+        <li [routerLinkActive]="'active'" routerLink="/citas" class="menu__list-link">
+          <a  class="menu__list-link--a " ><span class="material-symbols-outlined">
               calendar_month
             </span> Citas</a>
         </li>
-        <li class="menu__list-link">
-          <a routerLink="/equipo" class="menu__list-link--a" href="#"><span class="material-symbols-outlined">
+        <li [routerLinkActive]="'active'" routerLink="/equipo" class="menu__list-link">
+          <a  class="menu__list-link--a" ><span class="material-symbols-outlined">
               groups_2
             </span> Equipo</a>
         </li>

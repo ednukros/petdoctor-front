@@ -1,45 +1,49 @@
-<div class=" w-100 pt-2">
+<div class="team-container">
 
-    <div class="container pt-4 ">
-      <div class="d-flex justify-content-between mb-3 ">
-        <h6 class="display-6">Gestión de empleados</h6>
-        <button type="button" class="rounded-6 btn-primary btn-sm h-25 " routerLink="/crear-vet">Nuevo
-          veterinario</button>
-  
-      </div>
-      <div class="d-flex flex-wrap gap-4  py-3 ">
-        <div *ngFor="let employee of listEmployees" class="card p-2 bg-light  d-flex flex-column justify-content-between  flex-wrap " style="width: 25rem;">
-          <div class="d-flex ">
-            <img src="{{employee.image}}" class="card-img-top w-25 h-50 " alt="...">
-            <div class="card-body">
-              <h5 class="card-title mb-3 border-bottom ">{{employee.name}}</h5>
-              <p><span class="fw-bold ">Especialidad:</span> {{employee.speciality}}</p>
-  
-              <p><span class="fw-bold ">Teléfono:</span> {{employee.phoneNumber}}</p>
-              <p><span class="fw-bold ">Email:</span> {{employee.email}}</p>
-  
-  
-  
-  
-            </div>
+  <div class="team-content">
+    <div class="team-content__heading">
+      <h6 class="team-content__heading--title">Gestión de empleados</h6>
+      <button class="team-content__heading--btn btn" type="button" routerLink="/crear-vet">Nuevo
+        veterinario</button>
+
+    </div>
+    <div class="team-card__container">
+      <div *ngFor="let employee of listEmployees" class="team-card">
+        <div class="team-card__img ">
+          <img src="{{employee.image}}" class=" " alt="person image">
+          <div class="team-card__body">
+            <h5 class="team-card__body--name">{{employee.name}}</h5>
+            <p class="team-card__body--data"><span>Especialidad:</span> {{employee.speciality}}</p>
+
+            <p class="team-card__body--data"> <span>Teléfono:</span> {{employee.phoneNumber}}</p>
+            <p class="team-card__body--data"><span> Email:</span> {{employee.email}}</p>
+
+
+
+
           </div>
-          <div class="d-flex justify-content-between p-1  ">
-            <a href="#" class="btn btn-primary">Pacientes y citas</a>
-            <div>
-              <button routerLink="/editar-vet/{{employee.id}}" type="button" class="btn btn-edit"><span
+        </div>
+        <div class="team-card__nav">
+          <div class="team-card__nav--a">
+            <a routerLink="/pacientes" class="btn btn-primary">Ver Pacientes</a>
+            <a routerLink="/citas" class="btn btn-primary">Ver Citas</a>
+          </div>
+
+          <div class="team-card__btn">
+            <button routerLink="/editar-vet/{{employee.id}}" type="button" class="btn btn-edit"><span
                 class="material-symbols-outlined">
                 edit_square
               </span></button>
-            <button (click)="deleteEmployee(employee.id!)" type="button" class="btn btn-delete"><span>
+            <button (click)="deleteEmployee(employee.id!)" type="button" class="btn btn-delete"><span
+                class="material-symbols-outlined">
                 delete
               </span></button>
-            </div>
-            
           </div>
-  
+
         </div>
+
       </div>
-  
     </div>
+
   </div>
-  
+</div>
