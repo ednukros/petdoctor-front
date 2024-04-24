@@ -83,6 +83,12 @@ $pet-doctor-front-theme: mat.define-light-theme((
   background-color: var(--secondary);
   
 }
+
+.btn-check{
+  background-color: #7ba78c;
+  
+
+}
 .btn-delete{
   background-color: var(--alert);
   
@@ -472,7 +478,4 @@ form{
 
 }
 
-.form-patient {
-  padding: 20px;
-}
 

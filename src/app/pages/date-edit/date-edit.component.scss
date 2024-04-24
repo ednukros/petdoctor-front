@@ -1,8 +1,8 @@
-.form-patient {
+.form-date {
   padding: 20px;
 }
 
-.form-patient__heading {
+.form-date__heading {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -33,13 +33,13 @@ input {
   width: 100%;
   margin-bottom: 5px;
   background-color: white;
-  color: white;
+  color: var(--primary);
   border-radius: 3px;
 
 
 }
 
-.form-patient__container {
+.form-date__container {
 
   text-align: center;
   display: flex;

@@ -7,6 +7,7 @@ import { DatesComponent } from './pages/dates/dates.component';
 import { PatientEditComponent } from './pages/patient-edit/patient-edit.component';
 import { PatientDetailsComponent } from './pages/patient-details/patient-details.component';
 import { TeamEditComponent } from './pages/team-edit/team-edit.component';
+import { DateEditComponent } from './pages/date-edit/date-edit.component';
 //components
 
 const routes: Routes = [
@@ -20,6 +21,8 @@ const routes: Routes = [
   { path:'editar/:id', component: PatientEditComponent},
   { path:'editar-vet/:id', component: TeamEditComponent},
   { path:'crear-vet', component: TeamEditComponent},
+  { path:'crear-cita', component: DateEditComponent},
+
 
 
   

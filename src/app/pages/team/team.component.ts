@@ -29,7 +29,7 @@ export class TeamComponent implements OnInit {
     this._employeeService.deleteEmployee(id).subscribe(() => {
 
         this.getListEmployees();
-        this.toastr.warning('El paciente eliminado con éxito', 'Paciente eliminado')
+        this.toastr.warning('El paciente fue eliminado con éxito', 'Paciente eliminado')
 
     })
     

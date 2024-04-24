@@ -25,6 +25,7 @@ import { PatientDetailsComponent } from './pages/patient-details/patient-details
 import { PatientEditComponent } from './pages/patient-edit/patient-edit.component';
 import { RouterModule } from '@angular/router';
 import { TeamEditComponent } from './pages/team-edit/team-edit.component';
+import { DateEditComponent } from './pages/date-edit/date-edit.component';
 
 @NgModule({
   declarations: [
@@ -35,11 +36,12 @@ import { TeamEditComponent } from './pages/team-edit/team-edit.component';
     
 
     ChatComponent,
-    DatesComponent,
+
     TeamComponent,
     PatientDetailsComponent,
     PatientEditComponent,
-    TeamEditComponent
+    TeamEditComponent,
+    DateEditComponent
   ],
   imports: [
     FormsModule,
@@ -51,8 +53,11 @@ import { TeamEditComponent } from './pages/team-edit/team-edit.component';
     AppRoutingModule,
     ToastrModule.forRoot({
       timeOut: 3500,
-      positionClass: 'toast-bottom-right',
+      positionClass: 'toast-top-right',
       preventDuplicates: true,
+      progressBar: true,
+     
+  
     }),
     [HttpClientModule,
       MatInputModule,

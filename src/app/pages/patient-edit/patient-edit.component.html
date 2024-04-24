@@ -8,12 +8,14 @@
       </div>
      
       <form [formGroup]="form" (ngSubmit)="addPatient()" class="form" >
+
+        <h3>Introduzca los datos del paciente</h3>
         <input formControlName="name" type="text" placeholder="Nombre del paciente">      
         <small *ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched" id="emailHelp">Introduce el nombre de la mascota</small>
        
   
          
-       <div>
+       <div style="display: flex;"> 
         
         <div>
           <input type="radio" formControlName="species"  value="Perro" >
@@ -49,18 +51,18 @@
          
         <input formControlName="race" type="text" placeholder="Raza">      
     
-        <input formControlName="next_appointment" type="date" class="form-control mt-3" placeholder="Próxima cita">
+        <input formControlName="next_appointment" type="date" class="" placeholder="Próxima cita">
         <input formControlName="owner" type="text" class="form-control mt-3" placeholder="Nombre del propietario">
         <small *ngIf="form.get('owner')?.hasError('required') && form.get('owner')?.touched" id="emailHelp" class="form-text text-muted">Introduce el nombre del propietario</small>
         <input formControlName="phoneNumber" type="number" class="form-control mt-3" placeholder="Teléfono de contacto">
         <input formControlName="email" type="email" placeholder="Email de contacto">
         <!-- <small *ngIf="form.get('email')?.hasError('required')&& form.get('email')?.touched" id="emailHelp" class="form-text text-muted">Introduce un email de contacto</small> -->
-        <textarea name="" id=""></textarea>
-        <div class="d-flex justify-content-evenly    gap-2   mt-3">
-          <button type="submit"   [disabled]="form.invalid"  class="btn btn-edit "><span class="material-symbols-outlined">
+        <!-- <textarea name="" id=""></textarea> -->
+        <div class="buttons-container">
+          <button type="submit"   [disabled]="form.invalid"  class="btn btn-check "><span class="material-symbols-outlined">
             check_box
             </span></button>
-        <button type="button" class="btn btn-show" routerLink="/"><span class="material-symbols-outlined">
+        <button type="button" class="btn btn-delete" routerLink="/"><span class="material-symbols-outlined">
           disabled_by_default
           </span></button>
         </div>

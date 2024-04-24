@@ -52,7 +52,7 @@ export class EmployeesService {
 
   deleteEmployee(id: number): Observable<void> {
 
-    return this.http.delete<void>(`${this.myAppUrl}${this.myApiUrl}borrar/${id}`)
+    return this.http.delete<void>(`${this.myAppUrl}${this.myApiUrl}${id}`)
 
   }
 

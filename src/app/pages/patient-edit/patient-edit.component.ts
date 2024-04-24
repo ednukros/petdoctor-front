@@ -104,7 +104,7 @@ export class PatientEditComponent implements OnInit {
     if (this.id !== 0) {
       patient.id = this.id;
       this._patientService.updatePatient(this.id, patient).subscribe(() => {
-        this.toastr.success('El paciente ha sido actualizado con éxito', 'Paciente actualizado')
+        this.toastr.info('El paciente ha sido actualizado con éxito', 'Paciente actualizado')
         this.router.navigate(['/pacientes'])
 
       })
