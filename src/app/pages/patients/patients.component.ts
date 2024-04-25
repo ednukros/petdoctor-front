@@ -18,7 +18,7 @@ import { Toast, ToastrService } from 'ngx-toastr';
   templateUrl: './patients.component.html',
   styleUrls: ['./patients.component.scss'],
   standalone: true,
-  imports: [MatTableModule, MatPaginatorModule, NgFor, MatFormFieldModule, MatInputModule, MatButtonModule,RouterLink, RouterLinkActive, RouterOutlet]
+  imports: [MatTableModule, MatPaginatorModule, NgFor, MatFormFieldModule, MatInputModule, MatButtonModule, RouterLink, RouterLinkActive, RouterOutlet]
 })
 export class PatientsComponent implements AfterViewInit {
   displayedColumns: string[] = ['name', 'specie', 'owner', 'phoneNumber', 'actions'];
@@ -32,7 +32,7 @@ export class PatientsComponent implements AfterViewInit {
   Patient: any;
 
 
-  constructor(public _patientService: PatientsService, public toast:ToastrService) {
+  constructor(public _patientService: PatientsService, public toast: ToastrService) {
 
   }
   ngOnInit(): void {
@@ -45,15 +45,16 @@ export class PatientsComponent implements AfterViewInit {
   ngAfterViewInit() {
 
     this.datasource.paginator = this.paginator;
-    console.log(this.datasource + "1")
+
 
   }
 
 
 
-  
+
 
   applyFilter(event: Event) {
+    let $inputElement = document.querySelector(".search-input");
 
     let filterValue = (event.target as HTMLInputElement).value
     if (filterValue != "") {
@@ -63,16 +64,31 @@ export class PatientsComponent implements AfterViewInit {
           .includes(filterValue);
 
       }
+
+
       );
 
       this.listPatients = patientSearch
-      this.toasErrorSearch(patientSearch)
 
+      
+      if (patientSearch.length === 0) {
+        if ($inputElement?.textContent !== "No existe ningún paciente con ese nombre") {
+         
+          $inputElement!.textContent="No existe ningún paciente con ese nombre";
+          console.log("estoy en el if")
+          console.log(patientSearch.length)
 
+        }
+      }else{
+      console.log(patientSearch.length)
+        console.log("estoy en el else")
+        $inputElement!.textContent="";
+      }
 
     } else {
 
       this.getListPatients()
+      $inputElement!.textContent="";
 
 
 
@@ -85,38 +101,38 @@ export class PatientsComponent implements AfterViewInit {
 
   }
 
-  toasErrorSearch(patientSearch: Patient[]) {
-    let $errormsg = document.querySelector(".errorsearch")
-    let $inputElement = document.querySelector(".search-input");
-    let $errorSearch = document.createElement("p");
+  // toasErrorSearch() {
+  //   let $errormsg = document.querySelector(".errorsearch")
+  //   let $inputElement = document.querySelector(".search-input");
+  //   let $errorSearch = document.createElement("p");
 
-    if (patientSearch.length == 0) {
-      if (!$errormsg) {
+  //   if (!$errormsg) {
+  //     if (this.listPatients.length == 0) {
+  //       $errorSearch.className = "errorsearch";
+  //       $inputElement?.appendChild($errorSearch)
+  //       $errorSearch.textContent = "No existe ningún paciente con ese nombre"
 
-        console.log(patientSearch)
+  //     } else {
 
-        $errorSearch.className = "errorsearch";
-        $inputElement?.appendChild($errorSearch)
-        $errorSearch.textContent = "No existe ningún paciente con ese nombre"
+  //       $errorSearch.textContent = "Sí existe"
+  //     }
 
-
-        console.log(2)
-      }
-
-
-
-
-    }
-
-    if (this.listPatients.length > 0) {
-
-      $errorSearch.textContent = ""
-    }
+  //   }
 
 
 
 
-  }
+
+
+  //   if (this.listPatients.length > 0) {
+
+  //     $errorSearch.textContent = ""
+  //   }
+
+
+
+
+  // }
 
   getListPatients() {
 

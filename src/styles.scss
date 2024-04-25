@@ -75,6 +75,15 @@ $pet-doctor-front-theme: mat.define-light-theme((
   background-color: var(--primary-light);
   
 }
+
+.btn-return {
+
+  background-color: #d43161;
+  width: fit-content;
+  padding: 10px;
+  margin-bottom: 20px;
+
+}
 .btn-date{
   background-color: var(--warning);
   
@@ -476,6 +485,12 @@ form{
 
   background-color: var(--white);
 
+}
+
+
+input {
+
+  color: var(--primary) !important;
 }
 
 

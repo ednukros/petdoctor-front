@@ -1,0 +1,75 @@
+.patient-detail__container {
+  padding: 60px;
+}
+
+
+.patient-card {
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 5px;
+  padding: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+
+
+
+
+.patient-data {
+  border-left: 1px solid #ffffff2e;
+  padding-left: 40px;
+}
+
+
+ul{
+    padding:0;  
+}
+li{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    justify-content: space-between;
+}
+button{
+    width: fit-content;
+    font-weight: bold;
+    padding: 10px;
+
+    
+
+
+}
+
+.edit-a{
+    background-color: orange;
+    width: fit-content;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.btn-container{
+    display: flex;
+    gap: 10px;
+}
+.btn-show{
+    background-color: transparent !important;
+}
+.patient-info{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+li{
+    border-left: 3px double #ffffff2e;
+    border-right: 3px double #ffffff2e;
+border-top: 1px solid #ffffff2e;
+border-bottom: 1px solid #ffffff2e;
+
+    // border-right    : 3px solid #ffffff2e;
+    padding-left: 10px;
+
+
+
+}

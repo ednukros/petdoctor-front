@@ -52,8 +52,8 @@ import { DateEditComponent } from './pages/date-edit/date-edit.component';
     BrowserModule,
     AppRoutingModule,
     ToastrModule.forRoot({
-      timeOut: 3500,
-      positionClass: 'toast-top-right',
+      timeOut: 3000,
+      positionClass: 'toast-top-full-width',
       preventDuplicates: true,
       progressBar: true,
      

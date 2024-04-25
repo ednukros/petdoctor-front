@@ -15,6 +15,8 @@ export class PatientDetailsComponent implements OnInit {
   id: number;
   patient: any[] = [];
   modalSwitch:boolean = false;
+
+  historic:string[] = ["05-02-2023","09-04-2023","14-08-2023","31-01-2024","05-04-2024"]
   constructor(
     private _patientsService: PatientsService,
     // private modalServ:SwitchService,
